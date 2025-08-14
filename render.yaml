@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: future-roi-backend
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python src/main.py"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: FLASK_APP
+        value: src/main.py
+      - key: FLASK_ENV
+        value: production
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DATABASE_URL
+        value: sqlite:///app.db # Render will persist this database
+
+
