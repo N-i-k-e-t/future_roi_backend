@@ -3,7 +3,7 @@ services:
     name: future-roi-backend
     env: python
     buildCommand: "pip install -r requirements.txt"
-    startCommand: "python src/main.py"
+     startCommand: "python src/main.py"
     envVars:
       - key: PYTHON_VERSION
         value: 3.11.0
@@ -15,5 +15,3 @@ services:
         generateValue: true
       - key: DATABASE_URL
         value: sqlite:///app.db # Render will persist this database
-
-
